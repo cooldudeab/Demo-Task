@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: 'DM Sans', sans-serif; color: #222820; background: #faf9f6; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-optical-sizing: auto; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { min-width: 340px; margin: 0; }
+button, input, select { font: inherit; }
+button, a, select { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; }
+::selection { background: #dce8d7; color: #294232; }
+.nav-link { position: relative; padding: 6px 0; color: #777b71; font-size: 11px; transition: color .18s; }
+.nav-link::after { position: absolute; bottom: 0; left: 0; width: 0; height: 1.5px; border-radius: 2px; background: #45634a; content: ''; transition: width .2s; }
+.nav-link:hover, .nav-link.is-active { color: #344e3d; }
+.nav-link:hover::after, .nav-link.is-active::after { width: 100%; }
+.hero-pattern { background-image: radial-gradient(ellipse at 83% 14%, rgba(253,255,247,.45) 0, transparent 36%), radial-gradient(ellipse at 6% 99%, rgba(182,199,173,.28) 0, transparent 40%), linear-gradient(117deg, #e9eee5 0%, #eef0e7 56%, #e3ebe1 100%); }
+.hero-pattern::before, .hero-pattern::after { position: absolute; z-index: 1; pointer-events: none; content: ''; }
+.hero-pattern::before { top: -75px; right: 38%; width: 215px; height: 215px; border: 1px solid rgba(79,106,81,.075); border-radius: 50%; box-shadow: 0 0 0 22px rgba(79,106,81,.022), 0 0 0 48px rgba(79,106,81,.018); }
+.hero-pattern::after { bottom: -91px; left: 34%; width: 174px; height: 174px; border: 1px solid rgba(79,106,81,.075); border-radius: 50%; }
+.hero-photo img { animation: photoEnter .75s ease-out both; }
+@keyframes photoEnter { from { opacity: .65; transform: scale(1.04); } to { opacity: 1; transform: scale(1); } }
+.product-photo img { display: block; }
+.category-scroll { scrollbar-width: none; }
+.category-scroll::-webkit-scrollbar { display: none; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid #67846d; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
